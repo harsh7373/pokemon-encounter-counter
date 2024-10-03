@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        #dv1 {
+            width: 500px;
+            height: 180px;
+            background-color: orange;
+            border-radius: 20px;
+            margin-left: 500px;
+            margin-top: 200px;
+
+
+
+
+
+        }
+
+        #h {
+            color: gold;
+            text-align: center;
+            
+
+
+
+
+        }
+        #h2_tag{
+            text-align: center;
+            color: gold;
+            margin-top: 35px;
+        }
+        #btn1{
+            
+            background-color: gold;
+            margin-left: 200px;
+            margin-bottom: 100px;
+            
+        }
+        #btn2{
+            background-color: gold;
+        }
+
+
+        #dv2 {
+            width: 500px;
+            height: 180px;
+            background-color: orange;
+            border-radius: 20px;
+            margin-left: 500px;
+            margin-top: 100px;
+
+
+
+
+
+        }
+
+        #h_dusra{
+            display: flex;
+            justify-content: center;
+            color: gold;
+            
+        }
+        #h_teesra{
+            color: gold;
+            display: flex;
+            justify-content: center;
+        }
+        #btn_pahla{
+            margin-left: 200px;
+            margin-bottom: 100px;
+            background-color: gold;
+        }
+        #btn_dusra{
+
+            background-color: gold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="dv1">
+        <h1 id="h">POKEMON ENCOUNTER COUNTER BY HARSH</h1>
+        <h2  id="h2_tag">0</h2>
+        <button id="btn1">START</button>
+        <button id="btn2">STOP</button>
+    </div>
+
+
+
+    <!-- <div id="dv2">
+        <h1 id="h_dusra">DECREMENT_COUNTER</h1>
+        <h2  id="h_teesra">0</h2>
+        <button id="btn_pahla">START</button>
+        <button id="btn_dusra">STOP</button>
+    </div> -->
+<script>
+    
+    let startbtn=document.getElementById("btn1")
+    let stopbtn=document.getElementById("btn2")
+    let htag=document.getElementById("h2_tag")
+    
+    let time;
+    const increment=()=>{
+        let count=0;
+        htag.innerHTML="Loading.....";
+        time=setInterval(()=>{
+            htag.innerHTML=`${count}`;
+            count+=5;
+            // if(count>=50){
+            //     count=1
+            // }
+
+        },10000)
+
+    }
+    startbtn.addEventListener("click",increment)
+    stopbtn.addEventListener("click",function(){
+        clearInterval(time)
+    })
+
+
+    let btn1_tag=document.getElementById("btn_pahla")
+    let btn2_tag=document.getElementById("btn_dusra")
+    let head_tag=document.getElementById("h_teesra")
+    
+    // let interval;
+    // const decrement=()=>{
+    //     let count=100;
+    //     head_tag.innerHTML="Loading.....";
+    //     interval=setInterval(()=>{
+    //         head_tag.innerHTML=`${count}`;
+    //         count--;
+    //         if(count<=50){
+    //             count=100
+    //         }
+
+    //     },100)
+
+    // }
+    // btn1_tag.addEventListener("click",decrement)
+    // btn2_tag.addEventListener("click",function(){
+    //     clearInterval(interval)
+    // })
+    
+</script>
+
+</body>
+
+</html>
