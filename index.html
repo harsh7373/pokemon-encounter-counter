@@ -106,13 +106,20 @@
     let stopbtn=document.getElementById("btn2")
     let htag=document.getElementById("h2_tag")
     
+    let count=0
     let time;
+    let store_value=count
     const increment=()=>{
-        let count=0;
+        
         htag.innerHTML="Loading.....";
         time=setInterval(()=>{
             htag.innerHTML=`${count}`;
-            count+=5;
+            if(count===store_value){
+            count+=5
+        }
+        else if(count!==store_value){
+store_value=count
+        }
             // if(count>=50){
             //     count=1
             // }
