@@ -112,19 +112,8 @@
     const increment=()=>{
         
         htag.innerHTML="Loading.....";
-        time=setInterval(()=>{
-            htag.innerHTML=`${count}`;
-            if(count===store_value){
-            count+=5
-        }
-        else if(count!==store_value){
-store_value=count
-        }
-            // if(count>=50){
-            //     count=1
-            // }
-
-        },10000)
+       htag.innerHTML=`${count}`
+       count+=5
 
     }
     startbtn.addEventListener("click",increment)
